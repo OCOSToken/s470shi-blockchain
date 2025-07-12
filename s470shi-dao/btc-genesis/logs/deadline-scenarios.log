@@ -1,0 +1,69 @@
+=== OCOS DAO Genesis Time/Deadline Scenario Log ===
+Session ID: GENESIS-DEADLINE-2025-07-13-001
+Testnet, BTC Block Height: 2,246,710
+DAO BTC Address: tb1qdaoactivationaddrsxql9sk3qv90e8ya90c9qjv4w3t
+
+Activation Requirement: 7/7 unique payments of exactly 0.047 BTC
+Activation Deadline: 2025-07-13T11:45:00Z (UTC)
+Min Confirmations: 3
+
+---------------------------------------------------------------
+[2025-07-13T10:00:00Z] 0/7 payments detected (all pending, before deadline)
+
+✗ tb1q35v3k9tdw5...n4jxg — payment not detected
+✗ tb1q7wv2rnqsd4...ps7vq — payment not detected
+✗ tb1q4cn52n88n3...x6jhw — payment not detected
+✗ tb1qgq9phxy6e5...z4kym — payment not detected
+✗ tb1q0g3ldk5wa2...zj5yt — payment not detected
+✗ tb1qsd9p9dysu3...rjplg — payment not detected
+✗ tb1q6lwavrl7p7...xle9q — payment not detected
+
+---------------------------------------------------------------
+[2025-07-13T10:45:10Z] Payments detected, all before deadline:
+
+✓  tb1q35v3k9tdw5...n4jxg  0.047 BTC   TXID: d8e7c9...fe4   Confirmed: 1
+✓  tb1q7wv2rnqsd4...ps7vq  0.047 BTC   TXID: 7c1f2b...a2e   Confirmed: 1
+✓  tb1q4cn52n88n3...x6jhw  0.047 BTC   TXID: 2f8e5a...cd6   Confirmed: 1
+
+---------------------------------------------------------------
+[2025-07-13T11:44:58Z] Payment detected, right before deadline:
+
+✓  tb1qgq9phxy6e5...z4kym  0.047 BTC   TXID: e1f9d3...f3b   Confirmed: 1
+
+[2025-07-13T11:45:00Z] DEADLINE REACHED — no more on-time payments accepted.
+
+---------------------------------------------------------------
+[2025-07-13T11:46:11Z] Payment detected, but after deadline:
+
+✗  tb1q0g3ldk5wa2...zj5yt  0.047 BTC   TXID: 3d5e8c...e7a   [REJECTED: Payment received after deadline]
+
+[2025-07-13T11:48:22Z] Payment detected, but after deadline:
+
+✗  tb1qsd9p9dysu3...rjplg  0.047 BTC   TXID: 1e7f6a...9cd   [REJECTED: Payment received after deadline]
+
+[2025-07-13T11:59:59Z] Late payment detected:
+
+✗  tb1q6lwavrl7p7...xle9q  0.047 BTC   TXID: 8d1e5f...d3a   [REJECTED: Payment received after deadline]
+
+---------------------------------------------------------------
+[2025-07-13T12:00:00Z] Confirmation update:
+
+✓  tb1q35v3k9tdw5...n4jxg  0.047 BTC   TXID: d8e7c9...fe4   Confirmed: 3 [ACCEPTED]
+✓  tb1q7wv2rnqsd4...ps7vq  0.047 BTC   TXID: 7c1f2b...a2e   Confirmed: 3 [ACCEPTED]
+✓  tb1q4cn52n88n3...x6jhw  0.047 BTC   TXID: 2f8e5a...cd6   Confirmed: 3 [ACCEPTED]
+✓  tb1qgq9phxy6e5...z4kym  0.047 BTC   TXID: e1f9d3...f3b   Confirmed: 3 [ACCEPTED]
+✗  tb1q0g3ldk5wa2...zj5yt  0.047 BTC   TXID: 3d5e8c...e7a   [REJECTED: After deadline]
+✗  tb1qsd9p9dysu3...rjplg  0.047 BTC   TXID: 1e7f6a...9cd   [REJECTED: After deadline]
+✗  tb1q6lwavrl7p7...xle9q  0.047 BTC   TXID: 8d1e5f...d3a   [REJECTED: After deadline]
+
+---------------------------------------------------------------
+DAO ACTIVATION STATUS: FAILED ❌
+
+Reason: Only 4 of 7 payments received before the deadline.
+Payments after the deadline are REJECTED, per protocol.
+
+See audit logs and explorer for full TXID/confirmation details.
+DAO remains INACTIVE until all on-time payments are complete.
+
+---------------------
+End of Genesis Deadline Scenario Session
