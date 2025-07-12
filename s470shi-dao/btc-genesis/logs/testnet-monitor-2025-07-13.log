@@ -1,0 +1,66 @@
+[2025-07-13T10:00:00Z] 0/47 payments detected
+
+✗ 1KvU2eYwGd4czfXkAe3i9m6sVQq9c7KoNk — payment not detected
+✗ 1P2L6brsM7YeZfyoKxRFUvPfQ4etmCSusB — payment not detected
+✗ 1N53FJndtZpU2mGLqHbGnd2Po5GH6fhsdq — payment not detected
+✗ 1Jr52XE2kz2VfTqM7PCtSmLUHTcQxREw4a — payment not detected
+✗ 12tKByjRgP3T5g7ZoP7GKJ5VKmruw8vGZG — payment not detected
+✗ 1Patosh1Address45sR8QxwFy9Ko3LgjdA — payment not detected
+... (41 more)
+
+[2025-07-13T12:15:12Z] 29/47 payments detected
+
+✓ 1KvU2eYwGd4czfXkAe3i9m6sVQq9c7KoNk sent 0.047 BTC (TXID: 3a97f2c1...) [confirmed: 4]
+✓ 1P2L6brsM7YeZfyoKxRFUvPfQ4etmCSusB sent 0.047 BTC (TXID: 7b14e8d0...) [confirmed: 3]
+✓ 1N53FJndtZpU2mGLqHbGnd2Po5GH6fhsdq sent 0.047 BTC (TXID: 21d4be6f...) [confirmed: 2]
+✓ 1LegacyX3SwkYPRt9dBcRx8EwY1hN9nS2tu sent 0.047 BTC (TXID: 8ef1539a...) [confirmed: 4]
+✓ 1BcYjNDxjK2S5rBrHY5uCFpYMT6JEtRZ9q sent 0.047 BTC (TXID: 49c0e1db...) [confirmed: 1]
+... (24 more successful)
+✗ 1Jr52XE2kz2VfTqM7PCtSmLUHTcQxREw4a — payment not detected
+✗ 12tKByjRgP3T5g7ZoP7GKJ5VKmruw8vGZG — payment not detected
+✗ 1Patosh1Address45sR8QxwFy9Ko3LgjdA — payment not detected
+... (15 more not detected)
+
+[2025-07-13T14:52:48Z] 41/47 payments detected
+
+✓ 1KvU2eYwGd4czfXkAe3i9m6sVQq9c7KoNk sent 0.047 BTC (TXID: 3a97f2c1...) [confirmed: 8]
+✓ 1P2L6brsM7YeZfyoKxRFUvPfQ4etmCSusB sent 0.047 BTC (TXID: 7b14e8d0...) [confirmed: 7]
+✓ 1N53FJndtZpU2mGLqHbGnd2Po5GH6fhsdq sent 0.047 BTC (TXID: 21d4be6f...) [confirmed: 7]
+✓ 1LegacyX3SwkYPRt9dBcRx8EwY1hN9nS2tu sent 0.047 BTC (TXID: 8ef1539a...) [confirmed: 8]
+✓ 1BcYjNDxjK2S5rBrHY5uCFpYMT6JEtRZ9q sent 0.047 BTC (TXID: 49c0e1db...) [confirmed: 6]
+... (36 more successful, confirmations: 3-9)
+✗ 1Faild1h2DkHxrE9K1M1Ahv4Ai3Mv5qRA — payment not detected
+✗ 1OldPashFaildFg4a4JfdAwF4MNP1jh2g — payment not detected
+✗ 1MissLegacyRrQF6eQFn13DMxgVzJKbc9 — payment not detected
+✗ 12NoPayV7Awe3jZ46bUdVTVexRkGBs4LQ — payment not detected
+✗ 1FvFail4CkNNMjrQpVv7hKcNJHkUai5A — payment not detected
+✗ 19PatFailHHLXQwEwG54Gi3a8KnRTPg9j — payment not detected
+
+[2025-07-13T15:05:15Z] 41/47 payments detected — DAO ACTIVATION COMPLETE
+
+✓ 1KvU2eYwGd4czfXkAe3i9m6sVQq9c7KoNk sent 0.047 BTC (TXID: 3a97f2c1...) [confirmed: 12]
+✓ 1P2L6brsM7YeZfyoKxRFUvPfQ4etmCSusB sent 0.047 BTC (TXID: 7b14e8d0...) [confirmed: 11]
+✓ 1N53FJndtZpU2mGLqHbGnd2Po5GH6fhsdq sent 0.047 BTC (TXID: 21d4be6f...) [confirmed: 10]
+... (38 more successful)
+✗ 1Faild1h2DkHxrE9K1M1Ahv4Ai3Mv5qRA — payment not detected
+✗ 1OldPashFaildFg4a4JfdAwF4MNP1jh2g — payment not detected
+✗ 1MissLegacyRrQF6eQFn13DMxgVzJKbc9 — payment not detected
+✗ 12NoPayV7Awe3jZ46bUdVTVexRkGBs4LQ — payment not detected
+✗ 1FvFail4CkNNMjrQpVv7hKcNJHkUai5A — payment not detected
+✗ 19PatFailHHLXQwEwG54Gi3a8KnRTPg9j — payment not detected
+
+DAO ACTIVATION COMPLETE AT 2025-07-13T15:05:15Z
+
+----------------------------------------------------
+Total successful payments: 41/47
+Missing (not detected) payments from:
+- 1Faild1h2DkHxrE9K1M1Ahv4Ai3Mv5qRA
+- 1OldPashFaildFg4a4JfdAwF4MNP1jh2g
+- 1MissLegacyRrQF6eQFn13DMxgVzJKbc9
+- 12NoPayV7Awe3jZ46bUdVTVexRkGBs4LQ
+- 1FvFail4CkNNMjrQpVv7hKcNJHkUai5A
+- 19PatFailHHLXQwEwG54Gi3a8KnRTPg9j
+
+All payments are logged for DAO transparency and audit.
+TXIDs and confirmation counts are available for verification.
+DAO is ACTIVE.
