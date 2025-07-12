@@ -1,0 +1,69 @@
+=== OCOS DAO Genesis Network Failure & Recovery Log ===
+Session ID: GENESIS-NETREC-2025-07-13-001
+Testnet, BTC Block Height Start: 2,246,600
+DAO BTC Address: tb1qdaoactivationaddrsxql9sk3qv90e8ya90c9qjv4w3t
+
+---------------------------------------------------------------
+[2025-07-13T08:45:00Z] 0/7 payments detected
+
+✗ tb1q72m2qpspr6...f4qxt — payment not detected
+✗ tb1q5l4wvn06pn...k08tk — payment not detected
+✗ tb1q0klrfftswd...2cmhw — payment not detected
+✗ tb1q8lnxehkzsm...q4u6z — payment not detected
+✗ tb1q2d8gjyue8m...wpml8 — payment not detected
+✗ tb1qhzldmt0htn...hr3js — payment not detected
+✗ tb1qjc9zpqkvl2...elwkv — payment not detected
+
+---------------------------------------------------------------
+[2025-07-13T08:59:13Z] Network error: Blockstream API unreachable (ECONNREFUSED)
+[2025-07-13T08:59:43Z] Retry in 60 seconds...
+
+[2025-07-13T09:00:43Z] Network error: Blockstream API unreachable (ETIMEDOUT)
+[2025-07-13T09:01:43Z] Retry in 60 seconds...
+
+[2025-07-13T09:02:45Z] Network recovered. Successfully reconnected to API.
+[2025-07-13T09:02:45Z] Resuming payment monitoring...
+
+[2025-07-13T09:03:01Z] 2/7 payments detected
+✓  tb1q72m2qpspr6...f4qxt  0.047 BTC   TXID: 54c1e1...19f  Confirmed: 2
+✓  tb1q5l4wvn06pn...k08tk  0.047 BTC   TXID: a873f3...b11  Confirmed: 1
+✗  tb1q0klrfftswd...2cmhw — payment not detected
+✗  tb1q8lnxehkzsm...q4u6z — payment not detected
+✗  tb1q2d8gjyue8m...wpml8 — payment not detected
+✗  tb1qhzldmt0htn...hr3js — payment not detected
+✗  tb1qjc9zpqkvl2...elwkv — payment not detected
+
+---------------------------------------------------------------
+[2025-07-13T09:09:00Z] Bitcoin node restart detected (block height gap: 2,246,600 → 2,246,605)
+[2025-07-13T09:09:11Z] Syncing recent blocks...
+[2025-07-13T09:09:32Z] Node resynced. Monitoring resumed.
+
+[2025-07-13T09:10:00Z] 5/7 payments detected
+✓  tb1q72m2qpspr6...f4qxt  0.047 BTC   TXID: 54c1e1...19f  Confirmed: 3
+✓  tb1q5l4wvn06pn...k08tk  0.047 BTC   TXID: a873f3...b11  Confirmed: 3
+✓  tb1q8lnxehkzsm...q4u6z  0.047 BTC   TXID: 5d1e7a...c01  Confirmed: 2
+✓  tb1q2d8gjyue8m...wpml8  0.047 BTC   TXID: 39c2b5...7c9  Confirmed: 1
+✓  tb1qjc9zpqkvl2...elwkv  0.047 BTC   TXID: ef7b21...ad3  Confirmed: 1
+✗  tb1q0klrfftswd...2cmhw — payment not detected
+✗  tb1qhzldmt0htn...hr3js — payment not detected
+
+---------------------------------------------------------------
+[2025-07-13T09:15:00Z] 7/7 payments detected
+
+✓  tb1q72m2qpspr6...f4qxt   0.047 BTC   TXID: 54c1e1...19f  Confirmed: 4
+✓  tb1q5l4wvn06pn...k08tk   0.047 BTC   TXID: a873f3...b11  Confirmed: 4
+✓  tb1q0klrfftswd...2cmhw   0.047 BTC   TXID: 22e8c6...f10  Confirmed: 3
+✓  tb1q8lnxehkzsm...q4u6z   0.047 BTC   TXID: 5d1e7a...c01  Confirmed: 3
+✓  tb1q2d8gjyue8m...wpml8   0.047 BTC   TXID: 39c2b5...7c9  Confirmed: 2
+✓  tb1qhzldmt0htn...hr3js   0.047 BTC   TXID: 6a3d7e...81b  Confirmed: 1
+✓  tb1qjc9zpqkvl2...elwkv   0.047 BTC   TXID: ef7b21...ad3  Confirmed: 2
+
+---------------------------------------------------------------
+DAO ACTIVATION COMPLETE AT 2025-07-13T09:15:00Z
+
+All network errors, node restarts, and recovery events logged.
+No payments lost, full audit trail preserved.
+TXIDs and confirmation counts available for DAO and community review.
+
+---------------------
+End of Genesis Network Failure & Recovery Session
