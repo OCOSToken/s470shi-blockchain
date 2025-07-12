@@ -1,0 +1,55 @@
+=== OCOS DAO Genesis Negative Test Log ===
+Session ID: GENESIS-NEGATIVE-2025-07-13-001
+Testnet, BTC Block Height: 2,246,420
+DAO BTC Address: tb1qdaoactivationaddrsxql9sk3qv90e8ya90c9qjv4w3t
+
+Activation Requirement: 7/7 legacy payments of exactly 0.047 BTC, min 3 confirmations
+
+---------------------------------------------------------------
+[2025-07-13T11:00:00Z] 0/7 payments detected
+
+✗ tb1q72m2qpspr6...f4qxt — payment not detected
+✗ tb1q5l4wvn06pn...k08tk — payment not detected
+✗ tb1q0klrfftswd...2cmhw — payment not detected
+✗ tb1q8lnxehkzsm...q4u6z — payment not detected
+✗ tb1q2d8gjyue8m...wpml8 — payment not detected
+✗ tb1qhzldmt0htn...hr3js — payment not detected
+✗ tb1qjc9zpqkvl2...elwkv — payment not detected
+
+---------------------------------------------------------------
+[2025-07-13T11:11:10Z] Detected payments (some failed):
+
+✓  tb1q72m2qpspr6...f4qxt  0.047 BTC   TXID: 4d8fc1a...a9f  Confirmed: 1 [PENDING: Not enough confirmations]
+✗  tb1q5l4wvn06pn...k08tk  0.035 BTC   TXID: 2eab191...c8f  [REJECTED: Amount too low]
+✗  tb1q0klrfftswd...2cmhw  0.047 BTC   TXID: 7c8a5e0...ec4  [REJECTED: Sender not in signers.json]
+✓  tb1q8lnxehkzsm...q4u6z  0.047 BTC   TXID: 1ac4e09...8da  Confirmed: 3
+✗  tb1q2d8gjyue8m...wpml8  0.094 BTC   TXID: f5b81cd...bfa  [REJECTED: Amount too high]
+✗  tb1qhzldmt0htn...hr3js  0.047 BTC   TXID: 7c8a5e0...ec4  [REJECTED: Duplicate TXID/double spend]
+✗  tb1qjc9zpqkvl2...elwkv  0.047 BTC   TXID: 9a7d1e2...cba  [REJECTED: Payment received after deadline]
+
+---------------------------------------------------------------
+[2025-07-13T12:30:00Z] Confirmation and payment status:
+
+✓  tb1q8lnxehkzsm...q4u6z  0.047 BTC   TXID: 1ac4e09...8da  Confirmed: 4 [ACCEPTED]
+✗  tb1q72m2qpspr6...f4qxt  0.047 BTC   TXID: 4d8fc1a...a9f  Confirmed: 2 [PENDING: Not enough confirmations]
+✗  tb1q5l4wvn06pn...k08tk  0.035 BTC   TXID: 2eab191...c8f  [REJECTED: Amount too low]
+✗  tb1q0klrfftswd...2cmhw  0.047 BTC   TXID: 7c8a5e0...ec4  [REJECTED: Sender not in signers.json]
+✗  tb1q2d8gjyue8m...wpml8  0.094 BTC   TXID: f5b81cd...bfa  [REJECTED: Amount too high]
+✗  tb1qhzldmt0htn...hr3js  0.047 BTC   TXID: 7c8a5e0...ec4  [REJECTED: Duplicate TXID/double spend]
+✗  tb1qjc9zpqkvl2...elwkv  0.047 BTC   TXID: 9a7d1e2...cba  [REJECTED: Payment received after deadline]
+
+---------------------------------------------------------------
+DAO ACTIVATION STATUS: FAILED ❌
+
+Reason: Only 1 of 7 payments accepted.
+Failures detected:
+- Insufficient confirmations (tb1q72m2qpspr6...f4qxt)
+- Wrong amount sent (tb1q5l4wvn06pn...k08tk, tb1q2d8gjyue8m...wpml8)
+- Sender not authorized (tb1q0klrfftswd...2cmhw)
+- Double spend attempt (tb1qhzldmt0htn...hr3js)
+- Payment received after deadline (tb1qjc9zpqkvl2...elwkv)
+
+See audit log and explorer for TXID verification.
+
+---------------------
+End of Genesis Negative Test Session
