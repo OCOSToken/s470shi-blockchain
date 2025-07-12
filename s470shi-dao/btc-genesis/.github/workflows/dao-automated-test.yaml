@@ -1,0 +1,60 @@
+name: OCOS DAO Automated Tests & Compliance
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron:  '0 2 * * *'  # Every day at 02:00 UTC
+
+jobs:
+  test-and-audit:
+    runs-on: ubuntu-latest
+    env:
+      BTC_DAO_ADDRESS: ${{ secrets.BTC_DAO_ADDRESS }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          npm ci
+
+      - name: Lint and security scan
+        run: |
+          pylint scripts/
+          npm run lint
+          npm audit
+
+      - name: Unit tests (Python)
+        run: pytest
+
+      - name: Unit tests (Node.js)
+        run: npm test
+
+      - name: Integration & Regression Test (BTC Monitor)
+        run: node scripts/monitor_btc.js --test --log logs/test-activation-$(date +%F).log
+
+      - name: Compliance & Audit Checks
+        run: python scripts/compliance_audit_check.py
+
+      - name: Archive logs and artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-logs-${{ github.run_id }}
+          path: logs/
+
+      - name: Notify community
+        run: node scripts/notify_community.js --status ${{ job.status }}
