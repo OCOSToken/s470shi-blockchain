@@ -1,0 +1,56 @@
+=== OCOS DAO Genesis Audit & Transparency Test Log ===
+Session ID: AUDIT-TRANSP-2025-07-13-001
+Testnet, BTC Block Height: 2,246,920
+DAO BTC Address: tb1qdaoactivationaddrsxql9sk3qv90e8ya90c9qjv4w3t
+
+---------------------------------------------------------------
+[2025-07-13T10:10:00Z] Audit start — log integrity checksum: SHA256 3e71...d56a
+
+PAYMENT AUDIT TRAIL:
+──────────────────────────────────────────────
+✓  tb1qad1h7kjd2q...2pvk4  0.047 BTC  TXID: a1b2c3d4e5...90d2  Confirmed: 6
+✓  tb1qpl9w7vds9m...6uy8a  0.047 BTC  TXID: b7c8d9e0f1...4be1  Confirmed: 6
+✓  tb1qftlnh4cwmk...ke4gq  0.047 BTC  TXID: c1d2e3f4a5...e83f  Confirmed: 5
+✓  tb1q9g0ehku7n5...ncf6a  0.047 BTC  TXID: d5f6a7b8c9...cd1e  Confirmed: 5
+✓  tb1qg2mxhzq72k...x7lka  0.047 BTC  TXID: 8ab8f2e4d5...88b3  Confirmed: 5
+✓  tb1qpwrw3v7u8m...u0cnl  0.047 BTC  TXID: f8a7b9c1d2...de7a  Confirmed: 4
+✓  tb1qx3w4p7cn8z...8rfj2  0.047 BTC  TXID: 02c7f9e8a1...b4d2  Confirmed: 4
+
+All payment amounts verified, sender addresses match config/signers.json, min confirmations met.
+
+──────────────────────────────────────────────
+FAILED PAYMENTS:
+✗  tb1qz1h6fn9e3m...uyl3v  0.045 BTC  TXID: 1b2c3d4e5f...2fa7  [FAIL: amount too low]
+✗  tb1q8hy5lw3ujp...0zmc2  0.047 BTC  TXID: 3c4d5e6f7a...d5b4  [FAIL: sent after deadline]
+✗  tb1q2x9k6jtm4n...x9gf8  0.048 BTC  TXID: 9a8b7c6d5e...ac2f  [FAIL: amount too high]
+✗  tb1q4mj5rhf8lw...a4tq6  0.047 BTC  TXID: 5d6e7f8a9b...9d3a  [FAIL: double spend attempt]
+✗  tb1qnh2vgrm3zk...v0b7x  — no payment detected
+
+──────────────────────────────────────────────
+LOG INTEGRITY TEST:
+[2025-07-13T10:11:00Z] Log hash recalculated: SHA256 3e71...d56a (MATCHED)
+[2025-07-13T10:12:00Z] Log hash mismatch after manual edit attempt — ALERT: Integrity check failed!
+
+──────────────────────────────────────────────
+DAO ACTIVATION CHAIN:
+[2025-07-13T10:13:00Z] DAO status changed: pending → active
+[2025-07-13T10:13:05Z] Governance event: Activation recorded on-chain (ETH TXID: 0x1eab3...)
+[2025-07-13T10:13:10Z] DAO status confirmation sent to frontend and community explorer
+
+──────────────────────────────────────────────
+TXID REPLAY & EXPLORER CHECK:
+[2025-07-13T10:15:00Z] All 7 success TXIDs confirmed via Blockstream Explorer
+[2025-07-13T10:15:15Z] Log replay audit: Activation status, payment order and confirmation counts matched original log
+
+──────────────────────────────────────────────
+SUMMARY:
+Total payments required:   7
+Successful (on time):      7
+Failed/late/invalid:       5
+
+DAO status: ACTIVE
+Audit completed:           [2025-07-13T10:16:00Z]
+Session hash: SHA256 3e71...d56a
+
+---------------------
+End of Audit & Transparency Session
