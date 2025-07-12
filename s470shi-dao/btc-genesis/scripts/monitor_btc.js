@@ -27,7 +27,7 @@ async function getDaoTxs() {
 }
 
 function extractInputs(tx) {
-    // Geri qaytarır: [ { address: "...", value: sats } ]
+    //[ { address: "...", value: sats } ]
     return tx.vin.map(vin =>
         vin.prevout
             ? { address: vin.prevout.scriptpubkey_address, value: vin.prevout.value }
@@ -38,7 +38,7 @@ function extractInputs(tx) {
 function extractOutputs(tx) {
     return tx.vout.map(vout => ({
         address: vout.scriptpubkey_address,
-        value: vout.value, // Satoshi
+        value: vout.value, // S470SHI
     }));
 }
 
@@ -50,7 +50,7 @@ async function monitorPayments() {
     try {
         const txs = await getDaoTxs();
 
-        // Hər signerdən gələn ödənişləri axtar
+        // 
         let receivedFrom = {};
         for (const signer of signers) {
             receivedFrom[signer] = null; // null - no payment yet
@@ -93,7 +93,7 @@ async function monitorPayments() {
 
         if (confirmed >= REQUIRED_SIGNERS) {
             console.log("\n🎉 DAO ACTIVATION COMPLETE: All required payments received!\n");
-            // Burada backend/smart contract/notification trigger edilə bilər
+            // backend/smart contract/notification trigger
             // e.g. sendWebhook(), updateDatabase(), etc.
         }
     } catch (err) {
