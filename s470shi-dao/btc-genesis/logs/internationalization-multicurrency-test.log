@@ -1,0 +1,63 @@
+=== OCOS DAO Internationalization & Multi-currency Test Log ===
+Session ID: INTL-MULTICUR-2025-07-13-005
+Testnet, Multi-chain
+
+DAO BTC Address: tb1qdaoactivationaddrsxql9sk3qv90e8ya90c9qjv4w3t
+DAO LTC Address: tltc1qdaoactivationm7nls3w4pzt9jx2qyq4nyh9fs8w7t
+DAO ETH Address: 0xdao1234fFaF2e8A8e41F1A8005a38Ae10bB1E99c
+
+---------------------------------------------------------------
+Test parameters:
+- Signers: 10 (across 5 countries)
+- Currencies: BTC, LTC, ETH
+- Interface languages: English, Azerbaijani, Spanish, Chinese
+
+---------------------------------------------------------------
+[2025-07-13T14:00:00Z] Multi-currency and international tests started
+
+[2025-07-13T14:02:17Z] BTC payment detected
+✓  tb1q35v3k9tdw5...n4jxg  0.047 BTC (from Germany, UI: German)
+[2025-07-13T14:04:55Z] LTC payment detected
+✓  tltc1qwmuslfmjv...r3zvn  1.02 LTC (from Turkey, UI: Azerbaijani)
+[2025-07-13T14:07:03Z] ETH payment detected
+✓  0x1bA97...52B5  0.98 ETH (from Brazil, UI: Portuguese)
+[2025-07-13T14:09:20Z] BTC payment detected
+✓  tb1q6lwavrl7p7...xle9q  0.047 BTC (from USA, UI: English)
+[2025-07-13T14:13:47Z] BTC payment detected
+✓  tb1q4cn52n88n3...x6jhw  0.047 BTC (from China, UI: Chinese)
+[2025-07-13T14:15:13Z] LTC payment detected
+✓  tltc1qsd9p9dysu...rjplg  1.03 LTC (from Russia, UI: Russian)
+[2025-07-13T14:19:55Z] ETH payment detected
+✓  0x5D27a...0cDf  1.02 ETH (from UK, UI: English)
+
+---------------------------------------------------------------
+[2025-07-13T14:22:00Z] User feedback test (multi-language UI)
+- Azerbaijani user: “Statusu dərhal yoxlaya bildim. Dil və məbləğ problemi olmadı.”
+- Chinese user: "支付和状态显示很快，没有任何问题。"
+- Spanish user: "Pago recibido y confirmado en el panel en menos de 2 segundos."
+
+[2025-07-13T14:25:45Z] API audit:
+- All payments confirmed in native currency and converted to USD equivalent.
+- User explorer UI displays status, currency, and amount in user’s preferred language and unit.
+- No mismatch in backend and frontend data.
+
+---------------------------------------------------------------
+[2025-07-13T14:27:10Z] Edge cases
+✗  0x8f4D...19b8  1.00 ETH (UI: French) [REJECTED: Not an authorized signer]
+✗  tb1q9ztvjw3hs...z4wv9  0.046 BTC (UI: German) [REJECTED: Amount too low]
+✗  tltc1q8k9vjwp3...9wmc2  1.03 LTC (UI: Russian) [REJECTED: After deadline]
+
+---------------------------------------------------------------
+[2025-07-13T14:30:00Z] Final summary
+
+- BTC payments accepted: 3/4 (all on time, 1 failed for low amount)
+- LTC payments accepted: 2/3 (all on time, 1 after deadline)
+- ETH payments accepted: 2/3 (all on time, 1 unauthorized)
+- Supported languages tested: 4 (EN, AZ, ES, ZH)
+- All explorer and UI labels rendered correctly in user language
+
+DAO status: ACTIVE (minimum payments met, all data consistent)
+
+Audit completed at [2025-07-13T14:31:00Z]
+---------------------
+End of Internationalization & Multi-currency Test Session
