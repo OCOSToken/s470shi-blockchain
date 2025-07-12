@@ -1,0 +1,13 @@
+[
+  { "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", "label": "Genesis Satoshi Wallet" },
+  { "address": "12cbQLTFMXRnSzktFkuoG3eHoMeFtpTu3S", "label": "Early Block Patoshi" },
+  { "address": "12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX", "label": "Patoshi Reserve" },
+  { "address": "1HLoD9E4SDFFPDiYfNYnkBLQ85Y51J3Zb1", "label": "Genesis Support" },
+  { "address": "1FvzCLoTPGANNjWoUo6jUGuAG3wg1w4YjR", "label": "Historic Node" },
+  { "address": "15ubicBBWFnvoZLT7GiU2qxjRaKJPdkDMG", "label": "Legacy Contributor" },
+  { "address": "1JfbZRwdDHKZmuiZgYArJZhcuuzuw2HuMu", "label": "DAO Guardian" },
+  { "address": "1GkQmKAmHtNfnD3LHhTkewJxKHVSta4m2a", "label": "Early Patoshi Node" },
+  { "address": "16LoW7y83wtawMg5XmT4M3Q7EdjjUmenjM", "label": "DAO Reserve" },
+  { "address": "1J6PYEzr4CUoGbnXrELyHszoTSz3wCsCaj", "label": "Historic Block Holder" },
+  { "address": "1PSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc", "label": "Legacy Partner" }
+]
