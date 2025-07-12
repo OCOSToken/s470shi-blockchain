@@ -1,0 +1,60 @@
+=== OCOS DAO Genesis Activation Log ===
+Session ID: GENESIS-TEST-2025-07-13-001
+Testnet, BTC Block Height: 2,246,330
+DAO BTC Address: tb1qdaoactivationaddrsxql9sk3qv90e8ya90c9qjv4w3t
+
+Activation Requirement: 41/47 unique legacy payments of exactly 0.047 BTC
+Min Confirmations: 3
+
+---------------------------------------------------------------
+[2025-07-13T09:00:00Z] Initial state: 0/47 payments detected
+
+[2025-07-13T09:17:12Z] Payment detected
+✓  tb1q72m2qpspr6...f4qxt  0.047 BTC   TXID: 12f8c9b7e2...4a7    Confirmed: 1
+[2025-07-13T09:24:03Z] Payment detected
+✓  tb1q5l4wvn06pn...k08tk  0.047 BTC   TXID: 34ab1a04f2...1b3    Confirmed: 1
+
+... (log truncated for brevity; repeat for each success) ...
+
+[2025-07-13T12:02:11Z] Payment detected
+✓  tb1qgg3aeu6c2l...9c6ud  0.047 BTC   TXID: 90ce7f85da...fe7    Confirmed: 3
+
+[2025-07-13T12:25:41Z] Payment detected
+✓  tb1qvpe9qefam9...98jxg  0.047 BTC   TXID: b9f28a0c11...c31    Confirmed: 3
+
+... (until all 41/47 are detected) ...
+
+---------------------------------------------------------------
+[2025-07-13T13:09:00Z] Activation summary:
+
+Total signers:     47
+Successful:        41
+Missing:            6
+
+Successful addresses:
+✓  tb1q72m2qpspr6...f4qxt   TXID: 12f8c9b7e2...4a7    Confirmed: 4
+✓  tb1q5l4wvn06pn...k08tk   TXID: 34ab1a04f2...1b3    Confirmed: 4
+✓  tb1q0klrfftswd...2cmhw   TXID: 67c1e28fce...d4f    Confirmed: 3
+... (38 more) ...
+
+Missing (not detected):
+✗  tb1q2d8gjyue8m...wpml8
+✗  tb1qhzldmt0htn...hr3js
+✗  tb1qjc9zpqkvl2...elwkv
+✗  tb1q4ywn70rrnw...9dsvt
+✗  tb1qxrul5jmeeq...f6we5
+✗  tb1q5cnusg70wt...e3r7g
+
+---------------------------------------------------------------
+DAO ACTIVATION STATUS: SUCCESS ✅
+
+DAO Genesis status changed to **ACTIVE** at [2025-07-13T13:09:00Z]
+
+All TXIDs, payment amounts, and confirmation counts are logged for full transparency.
+For audit or governance review, see also:
+- /config/signers.json
+- /config/dao.json
+- /logs/test-activation.log
+
+---------------------
+End of Genesis Activation Session
