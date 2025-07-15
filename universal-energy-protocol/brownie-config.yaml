@@ -1,0 +1,30 @@
+project_structure:
+  contracts: ./contracts
+  interfaces: ./interfaces
+  scripts: ./scripts
+  tests: ./test
+
+compiler:
+  solc:
+    version: 0.8.19
+    optimizer:
+      enabled: true
+      runs: 200
+
+networks:
+  default: development
+  mainnet:
+    host: https://mainnet.infura.io/v3/$WEB3_INFURA_PROJECT_ID
+    explorer: https://etherscan.io
+  sepolia:
+    host: https://eth-sepolia.g.alchemy.com/v2/$ALCHEMY_KEY
+    explorer: https://sepolia.etherscan.io
+
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.9.3
+
+dotenv: .env
+
+reports:
+  gas: true
+  coverage: true
