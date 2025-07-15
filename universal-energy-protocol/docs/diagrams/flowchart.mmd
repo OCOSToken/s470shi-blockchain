@@ -1,0 +1,29 @@
+%% docs/diagrams/flowchart.mmd
+
+flowchart TD
+    User((User))
+    Stake[StakingModule]
+    UEP[UniversalEnergyProtocol]
+    NFT[NftUnlockModule]
+    Oracle[OracleBridgeModule]
+    NFTC[NFTContract]
+    DAO((DAO Governance))
+
+    User -- "Stake ERC-20" --> Stake
+    Stake -- "Mint ENERGY" --> UEP
+    UEP -- "ENERGY balance +" --> User
+
+    User -- "Burn ENERGY to unlock" --> NFT
+    NFT -- "Burn ENERGY" --> UEP
+    NFT -- "Mint NFT" --> NFTC
+    NFTC -- "NFT to User" --> User
+
+    Oracle -- "Oracle event: processOracleEvent()" --> UEP
+    UEP -- "ENERGY reward" --> User
+
+    User -- "Propose param/module change" --> DAO
+    DAO -- "Add/Remove Module<br>Set Parameters" --> UEP
+
+    UEP -- "Module callback" --> Stake
+    UEP -- "Module callback" --> NFT
+    UEP -- "Module callback" --> Oracle
