@@ -1,0 +1,81 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+yarn.lock
+
+# Hardhat, Truffle, Foundry, Brownie
+artifacts/
+cache/
+coverage/
+coverage.json
+typechain/
+build/
+dist/
+.env
+.env.*
+*.secret
+*.key
+*.pem
+*.p12
+
+# Hardhat temporary files
+deployments/
+out/
+*.dbg.json
+
+# Foundry
+foundry.toml
+lib/
+test/lib/
+
+# Brownie
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+brownie-config.yaml
+reports/
+
+# IDE & Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# Test results & logs
+test-*.log
+logs/
+*.log
+
+# OS/Temp files
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# CI/CD
+codecov.yml
+coverage/
+*.lcov
+
+# Docs
+docs/_build/
+docs/.pytest_cache/
+*.pdf
+*.svg
+*.png
+
+# GitHub workflow artifacts
+.github/workflows/*.secrets
+.github/workflows/*.key
+
+# Misc
+secret.*
+secret/
+tmp/
+temp/
