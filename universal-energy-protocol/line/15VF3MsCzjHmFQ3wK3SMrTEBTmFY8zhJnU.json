@@ -1,0 +1,37 @@
+{
+  "txid": "9b0f52332d7d013b49016416c4818b5abb80b01ca526b7b813830348ad2321be",
+  "size": 134,
+  "version": 1,
+  "locktime": 0,
+  "fee": 0,
+  "inputs": [
+    {
+      "coinbase": true,
+      "txid": "0000000000000000000000000000000000000000000000000000000000000000",
+      "output": 4294967295,
+      "sigscript": "04ffff001d0141",
+      "sequence": 4294967295,
+      "pkscript": null,
+      "value": null,
+      "address": null,
+      "witness": []
+    }
+  ],
+  "outputs": [
+    {
+      "address": "15VF3MsCzjHmFQ3wK3SMrTEBTmFY8zhJnU",
+      "pkscript": "4104bff063a080c07aa9d8e7038c9d1bd7e5076fc28dd3e905b76517ad958e9df65e83abefcdbdcd7310231aaaf16a53e9bc24598826a3291e5dab338675618e7f12ac",
+      "value": 5000000000,
+      "spent": false,
+      "spender": null
+    }
+  ],
+  "block": {
+    "height": 25,
+    "position": 0
+  },
+  "deleted": false,
+  "time": 1231568646,
+  "rbf": false,
+  "weight": 536
+}
